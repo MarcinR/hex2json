@@ -515,8 +515,6 @@ lub bez nawiasów / spacji:
         // don't collapse on text selection
         const sel = window.getSelection();
         if (sel && sel.toString().length > 0) return;
-        // don't collapse when clicking inside nested children area
-        if (e.target.closest('.children') && e.target.closest('.children') !== row.parentElement) return;
         node.classList.toggle('collapsed');
       });
 
